@@ -1,0 +1,10 @@
+# Example data roots on a SLURM cluster (select with LITECALIB_PATHS=cluster).
+# EDIT THESE PATHS: they are placeholders for your own project / scratch file systems.
+
+openpano_root: /project/<your_project>/data/openpano_v2
+commons_root: /project/<your_project>/data/commons_pano
+commons_sa_root: /project/<your_project>/data/commons_pano_sa
+megascenes_root: /project/<your_project>/data/megascenes
+benchmarks: /project/<your_project>/data/benchmarks
+rd_root: /project/<your_project>/data/rd
+scannetpp_token: ~/.scannetpp_token

@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "litecalib"
+dynamic = ["version"]
+description = "Lightweight single-image camera calibration from a sparse field-of-view field"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "litecalib/anycalib/LICENSE"]
+authors = [{name = "LiteCalib authors"}]
+keywords = ["camera calibration", "intrinsics", "lens distortion", "computer vision", "deep learning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+    "torch>=2.1",
+    "numpy",
+    "numba>=0.59",
+    "safetensors",
+    "huggingface_hub",
+    "pillow",
+    "scipy",
+]
+
+[project.optional-dependencies]
+train = [
+    "torchvision",
+    "h5py",
+    "omegaconf",
+    "pyyaml",
+    "tqdm",
+    "albumentations==1.4.*",
+    "opencv-python",
+    "kornia",
+    "requests",
+    "pandas",
+    "matplotlib",
+    "submitit",
+]
+
+[project.scripts]
+litecalib = "litecalib.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/kocurvik/litecalib"
+Models = "https://huggingface.co/LiteCalib"
+Dataset = "https://huggingface.co/datasets/LiteCalib/CommonsPano"
+
+[tool.setuptools.dynamic]
+version = {attr = "litecalib.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["litecalib*"]
+
+[tool.setuptools.package-data]
+"litecalib.anycalib" = ["LICENSE", "README"]

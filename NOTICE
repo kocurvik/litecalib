@@ -1,0 +1,9 @@
+LiteCalib
+
+This product includes software from AnyCalib (https://github.com/javrtg/AnyCalib), licensed under the
+Apache License, Version 2.0: the camera models, the calibrator, the DPT decoder and ray head, and the vendored
+DINOv2 vision transformer in litecalib/anycalib/ (imports rewritten), and the Numba port of AnyCalib's
+calibrator in litecalib/calibrator_cpu.py and litecalib/calibrator_cuda.py.
+
+AnyCalib in turn includes code from DINOv2 (https://github.com/facebookresearch/dinov2), licensed under the
+Apache License, Version 2.0.

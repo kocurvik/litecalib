@@ -1,0 +1,30 @@
+# Training data ablation: OpenPano + CommonsPano.
+#   python train/train.py --config configs/pano_aux_field_wsd24_k5_vitl_opg.yaml
+#   ... --submitit to run it on SLURM (see slurm.py)
+
+data: [openpano_v2_gen+commons_gen+commons_sa_gen]
+backbone: vitl14
+init: dinov2
+profile: field
+K: 5
+field_repr: fov
+decoder_layers: 2
+dense_loss_weight: 1.0
+epochs: 24
+samples_per_dataset: 144000
+batch_size: 24
+lr: 6.0e-5
+backbone_lr: 6.0e-6
+weight_decay: 0.01
+warmup_steps: 1000
+lr_schedule: wsd
+decay_epochs: 5
+branch_epochs: [19]
+nll_after: 1000000
+gpu_pipeline: true
+resume: true
+timeout_min: 1380
+workers: 8
+tag: pano_aux_field_wsd24_k5
+no_progress: true
+log_every: 100

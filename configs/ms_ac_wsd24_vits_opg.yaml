@@ -1,0 +1,25 @@
+# AnyCalib's network trained on LiteCalib's data and schedule at ViT-S (AnyCalib_ours in the paper).
+#   python train/train_anycalib.py --config configs/ms_ac_wsd24_vits_opg.yaml
+#   ... --submitit to run it on SLURM (see slurm.py)
+
+data: [openpano_v2_gen+commons_gen+commons_sa_gen, megascenes_dist]
+backbone: vits14
+dense_dim: 256
+init: dinov2
+epochs: 24
+samples_per_dataset: 72000
+no_preload: [megascenes_dist]
+batch_size: 24
+lr: 1.0e-4
+backbone_lr: 1.0e-5
+weight_decay: 0.05
+warmup_steps: 1000
+lr_schedule: wsd
+decay_epochs: 5
+gpu_pipeline: true
+resume: true
+timeout_min: 1380
+workers: 8
+tag: ms_ac_wsd24
+no_progress: true
+log_every: 100

@@ -1,0 +1,20 @@
+# Data roots of this machine. EDIT THESE PATHS before running anything that reads data.
+# paths.py reads configs/paths/$LITECALIB_PATHS.yaml (default: this file); `python paths.py` lists them.
+
+# panorama sources (each with {train,val,test}/ or {train,val}/ folders of equirectangular images);
+# the generated view datasets (<root>/<name>/{train,val,test}.h5) are written next to them
+openpano_root: /data/openpano_v2        # AnyCalib's extended OpenPano
+commons_root: /data/commons_pano        # CommonsPano (https://huggingface.co/datasets/LiteCalib/CommonsPano)
+commons_sa_root: /data/commons_pano_sa  # CommonsPano's second crawl, if kept in a separate folder
+
+# MegaScenes training views (<megascenes_root>/megascenes_dist/{train,val}.h5), data_utils/prepare_megascenes.py
+megascenes_root: /data/megascenes
+
+# benchmarks (<benchmarks>/<name>/images.{h5,csv} + images/): AnyCalib's, InFlux, Cathedral, ScanNet++
+benchmarks: /data/benchmarks
+
+# the source of the Cathedral benchmark (data_utils/prepare_rd.py)
+rd_root: /data/rd
+
+# a personal ScanNet++ download token (data_utils/prepare_scannetpp.py)
+scannetpp_token: ~/.scannetpp_token

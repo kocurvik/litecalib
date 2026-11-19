@@ -1,0 +1,28 @@
+# Training data ablation: OpenPano only, AnyCalib's step schedule (40 epochs).
+#   python train/train.py --config configs/e1_aux_field_k5_vitl_opg.yaml
+#   ... --submitit to run it on SLURM (see slurm.py)
+
+data: [openpano_v2_gen]
+backbone: vitl14
+init: dinov2
+profile: field
+K: 5
+field_repr: fov
+decoder_layers: 2
+dense_loss_weight: 1.0
+epochs: 40
+batch_size: 24
+lr: 6.0e-5
+backbone_lr: 6.0e-6
+weight_decay: 0.01
+warmup_steps: 1000
+lr_milestones: [10000, 30000]
+lr_gamma: 0.3
+nll_after: 1000000
+gpu_pipeline: true
+resume: true
+timeout_min: 1200
+workers: 8
+tag: e1_aux_field_k5
+no_progress: true
+log_every: 100

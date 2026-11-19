@@ -1,0 +1,311 @@
+{
+ "001945": {
+  "name": "Tower_Bridge",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London"
+ },
+ "005116": {
+  "name": "Ponte_della_paglia",
+  "benchmark": "megadepth2k",
+  "landmark": "0008 Piazza San Marco"
+ },
+ "020637": {
+  "name": "Bridge_of_Sighs_(Venice)",
+  "benchmark": "megadepth2k",
+  "landmark": "0008 Piazza San Marco"
+ },
+ "025037": {
+  "name": "St._Mark's_Basilica_(Venice)",
+  "benchmark": "megadepth2k",
+  "landmark": "0008 Piazza San Marco"
+ },
+ "025041": {
+  "name": "Santa_Maria_del_Fiore_(Florence)",
+  "benchmark": "megadepth2k",
+  "landmark": "0032 Florence Duomo"
+ },
+ "025796": {
+  "name": "Duomo_(Milan)",
+  "benchmark": "megadepth2k",
+  "landmark": "0063 Milan Duomo"
+ },
+ "028023": {
+  "name": "Sagrada_Família",
+  "benchmark": "megadepth2k",
+  "landmark": "0019 Sagrada Familia"
+ },
+ "028232": {
+  "name": "Baptistry_(Florence)",
+  "benchmark": "megadepth2k",
+  "landmark": "0032 Florence Duomo"
+ },
+ "036827": {
+  "name": "St_John's_Chapel,_Tower_of_London",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London"
+ },
+ "041170": {
+  "name": "Duomo_di_Milano_-_San_Giovanni_Bono_chapel",
+  "benchmark": "megadepth2k",
+  "landmark": "0063 Milan Duomo"
+ },
+ "058414": {
+  "name": "Baptistery_of_San_Giovanni_alle_Fonti_(Milan)",
+  "benchmark": "megadepth2k",
+  "landmark": "0063 Milan Duomo"
+ },
+ "074371": {
+  "name": "Galleria_Vittorio_Emanuele_II_(Milan)",
+  "benchmark": "megadepth2k",
+  "landmark": "0063 Milan Duomo"
+ },
+ "096120": {
+  "name": "The_Shard",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London",
+  "subcategories": [
+   "Tower_of_London_from_Shard_London_Bridge"
+  ]
+ },
+ "114865": {
+  "name": "Crypt_of_the_Sagrada_Família",
+  "benchmark": "megadepth2k",
+  "landmark": "0019 Sagrada Familia"
+ },
+ "116512": {
+  "name": "Goddess_Kubaba-British_Museum_SOC_14_SOC_10",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum"
+ },
+ "126567": {
+  "name": "Mount_Rushmore",
+  "benchmark": "megadepth2k",
+  "landmark": "1589 Mount Rushmore"
+ },
+ "126800": {
+  "name": "Casa_Milà",
+  "benchmark": "megadepth2k",
+  "landmark": "0019 Sagrada Familia",
+  "subcategories": [
+   "Views_of_the_Sagrada_Família_from_Casa_Milà"
+  ]
+ },
+ "126805": {
+  "name": "Parc_Güell",
+  "benchmark": "megadepth2k",
+  "landmark": "0019 Sagrada Familia",
+  "subcategories": [
+   "Views_of_the_Sagrada_Família_from_Parc_Güell"
+  ]
+ },
+ "129672": {
+  "name": "Monument_to_Victor_Emmanuel_II_(Milan)",
+  "benchmark": "megadepth2k",
+  "landmark": "0063 Milan Duomo"
+ },
+ "139984": {
+  "name": "House_frontal_pole_(Haida),_British_Museum",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum"
+ },
+ "160280": {
+  "name": "Lincoln_Memorial",
+  "benchmark": "megadepth2k",
+  "landmark": "0021 Lincoln Memorial"
+ },
+ "160684": {
+  "name": "Abraham_Lincoln_seated_at_the_Lincoln_Memorial",
+  "benchmark": "megadepth2k",
+  "landmark": "0021 Lincoln Memorial"
+ },
+ "166363": {
+  "name": "Interior_of_the_Florence_Baptistry_-_Antipope_John_XXIII_tomb",
+  "benchmark": "megadepth2k",
+  "landmark": "0032 Florence Duomo"
+ },
+ "171594": {
+  "name": "Mount_Rushmore_National_Memorial",
+  "benchmark": "megadepth2k",
+  "landmark": "1589 Mount Rushmore"
+ },
+ "177823": {
+  "name": "Doge's_Palace_(Venice)",
+  "benchmark": "megadepth2k",
+  "landmark": "0008 Piazza San Marco"
+ },
+ "184825": {
+  "name": "Palazzo_Reale_(Milan)",
+  "benchmark": "megadepth2k",
+  "landmark": "0063 Milan Duomo"
+ },
+ "185010": {
+  "name": "Palazzo_Vecchio",
+  "benchmark": "megadepth2k",
+  "landmark": "0032 Florence Duomo",
+  "subcategories": [
+   "Santa_Maria_del_Fiore_(Florence)_seen_from_the_chemin_de_ronde_of_Palazzo_Vecchio"
+  ]
+ },
+ "206978": {
+  "name": "Parthenon",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum",
+  "subcategories": [
+   "Frieze_of_the_Parthenon_in_the_British_Museum",
+   "Metopes_of_the_Parthenon_(south)_in_the_British_Museum",
+   "Sculptures_of_the_East_Pediment_of_the_Parthenon_in_the_British_Museum"
+  ]
+ },
+ "206981": {
+  "name": "Erechtheum",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum",
+  "subcategories": [
+   "Caryatid_of_Erechtheum_in_the_British_Museum_(London)"
+  ]
+ },
+ "216010": {
+  "name": "Lindenhof_hill",
+  "benchmark": "lamar2k",
+  "landmark": "LIN (Zurich old town), unverified"
+ },
+ "216053": {
+  "name": "Piazza_San_Marco_(Venice)",
+  "benchmark": "megadepth2k",
+  "landmark": "0008 Piazza San Marco"
+ },
+ "216070": {
+  "name": "Tower_Green",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London"
+ },
+ "216643": {
+  "name": "Plaça_de_Gaudí",
+  "benchmark": "megadepth2k",
+  "landmark": "0019 Sagrada Familia"
+ },
+ "217512": {
+  "name": "Piazzale_Michelangelo",
+  "benchmark": "megadepth2k",
+  "landmark": "0032 Florence Duomo",
+  "subcategories": [
+   "Santa_Maria_del_Fiore_(Florence)_seen_from_Piazzale_Michelangelo"
+  ]
+ },
+ "217760": {
+  "name": "Piazzetta_dei_leoncini_(Venice)",
+  "benchmark": "megadepth2k",
+  "landmark": "0008 Piazza San Marco"
+ },
+ "219048": {
+  "name": "Piazzetta_San_Marco_(Venice)",
+  "benchmark": "megadepth2k",
+  "landmark": "0008 Piazza San Marco"
+ },
+ "219503": {
+  "name": "St._Mark's_Square_in_Poznań",
+  "benchmark": "megadepth2k",
+  "landmark": "0008 Piazza San Marco"
+ },
+ "229567": {
+  "name": "British_Museum",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum"
+ },
+ "229599": {
+  "name": "Tower_of_London",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London"
+ },
+ "237393": {
+  "name": "Giardino_Bardini",
+  "benchmark": "megadepth2k",
+  "landmark": "0032 Florence Duomo",
+  "subcategories": [
+   "Santa_Maria_del_Fiore_(Florence)_seen_from_Giardino_Bardini"
+  ]
+ },
+ "247846": {
+  "name": "Piazza_San_Marco_(Venice)_-_Clock_tower",
+  "benchmark": "megadepth2k",
+  "landmark": "0008 Piazza San Marco"
+ },
+ "261187": {
+  "name": "Canal_Grande_(Venice)",
+  "benchmark": "megadepth2k",
+  "landmark": "0008 Piazza San Marco",
+  "subcategories": [
+   "San_Marco_stop_on_Canal_Grande"
+  ]
+ },
+ "265212": {
+  "name": "Giotto's_Bell_Tower",
+  "benchmark": "megadepth2k",
+  "landmark": "0032 Florence Duomo"
+ },
+ "265293": {
+  "name": "Beauchamp_tower,_Tower_of_London",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London"
+ },
+ "265337": {
+  "name": "Byward_Tower",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London"
+ },
+ "265574": {
+  "name": "Middle_Tower_(Tower_of_London)",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London"
+ },
+ "270429": {
+  "name": "St_Thomas_Tower",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London"
+ },
+ "275015": {
+  "name": "White_Tower_(Tower_of_London)",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London"
+ },
+ "278786": {
+  "name": "Colossal_bust_of_Ramses_II,_British_Museum",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum"
+ },
+ "279133": {
+  "name": "Trajan_statue,_Tower_Hill",
+  "benchmark": "megadepth2k",
+  "landmark": "0025 Tower of London"
+ },
+ "279843": {
+  "name": "Statue_of_Tara,_British_Museum",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum"
+ },
+ "279971": {
+  "name": "Molossian_hound_(British_Museum)",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum"
+ },
+ "282985": {
+  "name": "Lion_head_of_Katuwas_statue-British_Museum_1105.1",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum"
+ },
+ "282986": {
+  "name": "Lion_head_of_Katuwas_statue-British_Museum_1114.6",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum"
+ },
+ "283417": {
+  "name": "Cast_of_a_guardian_lion-British_Museum_C_31",
+  "benchmark": "megadepth2k",
+  "landmark": "0024 British Museum"
+ },
+ "391549": {
+  "name": "Igreja_Sagrada_Família",
+  "benchmark": "megadepth2k",
+  "landmark": "0019 Sagrada Familia"
+ }
+}
