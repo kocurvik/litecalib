@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE", "litecalib/anycalib/LICENSE"]
-authors = [{name = "Viktor Kocur"}, {name = "Lukáš Bujňák"}]
+authors = [{name = "Viktor Kocur"}, {name = "Lukas Bujnak"}]
 keywords = ["camera calibration", "intrinsics", "lens distortion", "computer vision", "deep learning"]
 classifiers = [
     "Programming Language :: Python :: 3",
