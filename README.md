@@ -7,6 +7,9 @@ Zuzana Kukelova<sup>3</sup>
 <sup>2</sup> Czech Institute of Informatics, Robotics and Cybernetics, Czech Technical University in Prague<br>
 <sup>3</sup> Visual Recognition Group, Faculty of Electrical Engineering, Czech Technical University in Prague
 
+**[Project page](https://kocurvik.github.io/litecalib/)** | [Models](https://huggingface.co/LiteCalib) |
+[CommonsPano dataset](https://huggingface.co/datasets/LiteCalib/CommonsPano)
+
 **Lightweight single-image camera calibration.** Given one image, LiteCalib estimates the camera's
 intrinsics (focal length and lens distortion) for any radially symmetric camera model: pinhole,
 Brown-Conrady, Kannala-Brandt, UCM or the division model.
