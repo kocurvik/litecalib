@@ -1,0 +1,427 @@
+/* Colours of the video: dark red accent, LiteCalib blue, neutral greys */
+:root {
+	--primary-color: #9e2b2f;
+	--primary-hover: #851216;
+	--accent-color: #1a73b3;
+	--lc-ours: #1a73b3;
+	--lc-tint: #fff7fb;
+	--text-primary: #222222;
+	--text-secondary: #6b6b6b;
+	--text-light: #9a9a9a;
+	--background-secondary: var(--lc-tint);
+	--border-color: #eadfe2;
+	--gradient-accent: linear-gradient(135deg, #ff9195 0%, #9e2b2f 100%);
+}
+
+a {
+	color: var(--primary-color);
+}
+
+a:hover {
+	color: var(--primary-hover);
+}
+
+.muted-note {
+	color: var(--text-secondary);
+}
+
+.title {
+	color: var(--text-primary);
+}
+
+.publication-title {
+	margin-bottom: 1.5rem !important;
+}
+
+/* Bulma's .hero is a column flexbox and .container has auto side margins, so a long <pre> would make the container max-content wide (clipped by .hero's overflow: hidden). Keep it at the hero's width. */
+.hero > .container {
+	width: 100%;
+	min-width: 0;
+}
+
+.affiliations {
+	color: var(--text-secondary);
+	font-weight: 400;
+}
+
+.publication-links .button[aria-disabled="true"] {
+	opacity: 0.45;
+	cursor: default;
+	pointer-events: none;
+}
+
+/* Video */
+.lc-video {
+	border-radius: var(--border-radius-lg);
+	overflow: hidden;
+	box-shadow: var(--shadow-xl);
+	background: #000;
+	line-height: 0;
+}
+
+.lc-video video {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+}
+
+/* Card around the chart */
+.lc-card {
+	background: var(--background-primary);
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius-lg);
+	box-shadow: var(--shadow-md);
+	padding: 1.25rem 1.5rem;
+}
+
+.lc-chart-head {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+.lc-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem 1rem;
+	font-size: 0.9rem;
+	color: var(--text-secondary);
+}
+
+.lc-legend span {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	white-space: nowrap;
+}
+
+.lc-toggle {
+	margin-bottom: 0 !important;
+}
+
+.lc-toggle .button {
+	margin-bottom: 0 !important;
+	border: 1px solid var(--border-color) !important;
+	font-weight: 500 !important;
+}
+
+.lc-toggle .button.is-selected {
+	background: var(--primary-color);
+	color: #fff;
+	border-color: var(--primary-color) !important;
+}
+
+/* method / scene buttons of the 3D panels: separate buttons with gaps (the device toggle stays joined) */
+.lc-choice {
+	gap: 0.4rem 0.45rem;
+}
+
+.lc-choice .button {
+	margin: 0 !important;
+}
+
+.lc-toggle .button[disabled] {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.lc-chart svg {
+	display: block;
+	width: 100%;
+	height: auto;
+	font-family: 'Inter', sans-serif;
+}
+
+.lc-chart .grid line {
+	stroke: #eef1f5;
+}
+
+.lc-chart .axis line,
+.lc-chart .axis path {
+	stroke: #94a3b8;
+}
+
+.lc-chart .tick text,
+.lc-chart .axis-label {
+	fill: var(--text-secondary);
+	font-size: 12px;
+}
+
+.lc-chart .axis-label {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.lc-chart .pt-label {
+	fill: var(--text-primary);
+	font-size: 11px;
+}
+
+.lc-chart .annot {
+	fill: var(--text-secondary);
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.lc-chart .mark {
+	stroke: #fff;
+	stroke-width: 1.5;
+	cursor: default;
+}
+
+/* 3D comparison: one card per downstream task */
+.lc-task-card + .lc-task-card {
+	margin-top: 1.5rem;
+}
+
+.lc-controls {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 0.5rem 1rem;
+	margin: 0.75rem 0 0.5rem;
+}
+
+/* Method above Scene, the labels in one column; they take the width up to Reset view (the buttons must fit in it) */
+.lc-selects {
+	flex: 1 1 auto;
+	min-width: 0;
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	align-items: center;
+	gap: 0.6rem 0.75rem;
+}
+
+.lc-control {
+	display: contents;
+}
+
+.lc-control[hidden] {
+	display: none;
+}
+
+.lc-control-label {
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--text-secondary);
+}
+
+/* buttons, or a dropdown when they do not fit in one row (is-compact, set by clouds.js) */
+.lc-control.is-compact .lc-toggle,
+.lc-control:not(.is-compact) .lc-select {
+	display: none;
+}
+
+.lc-select {
+	justify-self: start;
+}
+
+.lc-select select {
+	min-width: 12rem;
+	border-color: var(--border-color);
+	font-weight: 500;
+}
+
+.lc-select select:hover,
+.lc-select select:focus {
+	border-color: var(--primary-color);
+}
+
+.lc-select:not(.is-multiple):not(.is-loading)::after {
+	border-color: var(--primary-color);
+}
+
+.lc-3d {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.75rem;
+	margin: 0.5rem 0 0.75rem;
+}
+
+.lc-3d-panel {
+	position: relative;
+	margin: 0;
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	background: #fafafa;
+}
+
+.lc-3d-panel canvas {
+	display: block;
+	width: 100%;
+	height: 380px;
+	touch-action: none;
+	cursor: grab;
+}
+
+.lc-3d-panel canvas:active {
+	cursor: grabbing;
+}
+
+.lc-3d-panel figcaption {
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	padding: 0.3rem 0.6rem;
+	border-radius: 8px;
+	background: rgb(255 255 255 / 0.85);
+	font-size: 0.85rem;
+	line-height: 1.35;
+	pointer-events: none;
+	border-left: 3px solid #94a3b8;
+}
+
+.lc-3d-panel figcaption.is-ours {
+	border-left-color: var(--lc-ours);
+}
+
+.lc-3d-panel figcaption span {
+	color: var(--text-secondary);
+}
+
+.lc-3d-status {
+	position: absolute;
+	inset: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+	pointer-events: none;
+}
+
+.lc-3d-panel.is-loading .lc-3d-status {
+	display: flex;
+}
+
+.lc-3d-caption {
+	color: var(--text-primary);
+	margin-bottom: 0.25rem;
+}
+
+.lc-reset {
+	color: var(--text-secondary) !important;
+	box-shadow: none !important;
+}
+
+.lc-3d-panel figcaption.is-gt {
+	border-left-color: var(--text-primary);
+}
+
+/* Collapsed extras under a panel: input photos, ground truth */
+.lc-more {
+	margin-top: 0.5rem;
+	border-top: 1px solid var(--border-color);
+}
+
+.lc-details {
+	border-bottom: 1px solid var(--border-color);
+}
+
+.lc-details > summary {
+	padding: 0.5rem 0;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.lc-details > summary:hover {
+	color: var(--text-primary);
+}
+
+.lc-details[open] > summary {
+	color: var(--text-primary);
+}
+
+.lc-3d.is-single {
+	grid-template-columns: 1fr;
+	margin-top: 0;
+}
+
+/* raw photos under the left panel, undistorted ones under the right one */
+.lc-photos {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.75rem;
+	padding-bottom: 0.75rem;
+}
+
+.lc-photo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	gap: 0.35rem;
+	margin-top: 0.35rem;
+}
+
+.lc-photo-grid a {
+	display: block;
+	line-height: 0;
+}
+
+.lc-photo-grid img {
+	width: 100%;
+	height: auto;
+	border-radius: 4px;
+	background: #f0f0f0;
+}
+
+@media screen and (max-width: 768px) {
+	.lc-3d,
+	.lc-photos {
+		grid-template-columns: 1fr;
+	}
+	.lc-3d-panel canvas {
+		height: 300px;
+	}
+}
+
+/* white footer under the tinted BibTeX */
+.footer {
+	background: var(--background-primary);
+}
+
+/* Code blocks */
+.content pre {
+	margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+	.lc-card {
+		padding: 1rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	/* index.css makes every .button full width on phones; keep the device toggle compact */
+	.lc-toggle .button,
+	.lc-reset {
+		width: auto !important;
+		margin: 0 !important;
+	}
+
+	/* the dropdowns take the whole width, Reset view goes under them */
+	.lc-controls {
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+
+	.lc-selects {
+		flex: 1 1 100%;
+		min-width: 0;
+	}
+
+	.lc-select,
+	.lc-select select {
+		width: 100%;
+		min-width: 0;
+	}
+}

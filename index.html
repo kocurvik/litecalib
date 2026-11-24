@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- TODO: Meta Tags -->
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="static/images/fmfi.png">
+	<link rel="apple-touch-icon" href="static/images/fmfi-180.png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="static/css/bulma.min.css">
+	<link rel="stylesheet" href="static/css/primeicons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+	<link rel="stylesheet" href="static/css/index.css">
+	<link rel="stylesheet" href="static/css/litecalib.css">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<script type="importmap">
+		{
+			"imports": {
+				"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+				"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+			}
+		}
+	</script>
+
+	<!-- Main JavaScript -->
+	<script type="module">
+		import { initSpeedAccuracy } from "./static/js/speed-acc.js";
+		import { initClouds } from "./static/js/clouds.js";
+		initSpeedAccuracy();
+		initClouds();
+	</script>
+
+</head>
+<body>
+
+	<!-- Hero -->
+	<section class="hero">
+		<div class="hero-body">
+			<div class="container is-max-desktop has-text-centered">
+				<h1 class="title is-1 publication-title">LiteCalib: Fast, Model-Agnostic Single-View Camera Calibration</h1>
+				<div class="is-size-5 publication-authors">
+					<span class="author-block">Viktor Kocur<sup>1</sup></span>
+					<span class="author-block">Lukáš Bujňák<sup>1</sup></span>
+					<span class="author-block">Lukáš Gajdošech<sup>1</sup></span>
+					<span class="author-block">Torsten Sattler<sup>2</sup></span>
+					<span class="author-block">Zuzana Kukelova<sup>3</sup></span>
+				</div>
+				<div class="is-size-6 publication-authors affiliations">
+					<span class="author-block"><sup>1</sup>Comenius University Bratislava</span>
+					<span class="author-block"><sup>2</sup>CIIRC, CTU Prague</span>
+					<span class="author-block"><sup>3</sup>Visual Recognition Group, CTU Prague</span>
+				</div>
+
+				<div class="publication-links">
+					<!-- TODO: arXiv link once the paper is public -->
+					<span class="link-block">
+						<a class="external-link button is-normal is-rounded is-dark" aria-disabled="true" title="Coming soon">
+							<span class="icon"><i class="ai ai-arxiv"></i></span>
+							<span>Paper (soon)</span>
+						</a>
+					</span>
+					<span class="link-block">
+						<a href="https://github.com/kocurvik/litecalib" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+							<span class="icon"><i class="pi pi-github"></i></span>
+							<span>Code</span>
+						</a>
+					</span>
+					<span class="link-block">
+						<a href="https://huggingface.co/LiteCalib" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+							<span class="icon"><i class="pi pi-box"></i></span>
+							<span>Models</span>
+						</a>
+					</span>
+					<span class="link-block">
+						<a href="https://huggingface.co/datasets/LiteCalib/CommonsPano" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+							<span class="icon"><i class="pi pi-database"></i></span>
+							<span>CommonsPano</span>
+						</a>
+					</span>
+					<span class="link-block">
+						<a href="https://colab.research.google.com/github/kocurvik/litecalib/blob/main/notebooks/reconstruction.ipynb" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+							<span class="icon"><i class="pi pi-code"></i></span>
+							<span>3D Reconstruction Demo</span>
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Video -->
+	<section class="section pt-0">
+		<div class="container is-max-desktop">
+			<div class="lc-video">
+				<video controls preload="metadata" playsinline poster="static/images/poster.jpg">
+					<!-- served from the kocurvik/litecalib_examples repo (large files); AV1 WebM (9 MB), H.264 MP4 for browsers without AV1 (e.g. Safari on devices without AV1 hardware) -->
+					<source src="https://kocurvik.github.io/litecalib_examples/videos/litecalib.webm" type='video/webm; codecs="av01.0.08M.08, opus"'>
+					<source src="https://kocurvik.github.io/litecalib_examples/videos/litecalib.mp4" type="video/mp4">
+					Your browser cannot play this video.
+				</video>
+			</div>
+		</div>
+	</section>
+
+	<!-- Quick start -->
+	<section class="section">
+		<div class="container is-max-desktop">
+			<h2 class="title is-3 has-text-centered">Quick Start</h2>
+			<div class="content">
+<pre><code>pip install litecalib</code></pre>
+<pre><code>import litecalib
+
+model = litecalib.load("litecalib_vitl")         # or litecalib_vitb / litecalib_vits
+calib = model.calibrate("photo.jpg", cam_id="radial:1")
+calib.K, calib.distortion                       # intrinsics in pixels of the original image
+undistorted = calib.undistort("photo.jpg")</code></pre>
+				<p class="muted-note has-text-centered">
+					More in the <a href="https://github.com/kocurvik/litecalib#readme" target="_blank" rel="noopener">README</a>.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Abstract -->
+	<section class="section hero is-light">
+		<div class="container is-max-desktop">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-four-fifths">
+					<h2 class="title is-3">Abstract</h2>
+					<div class="content has-text-justified">
+						<p>
+							Recent learning-based methods for single-image camera calibration rely on predicting dense per-pixel fields as an intermediate representation, which can be used to fit the parameters of a specific model. In this paper we show that predicting only a sparse intermediate representation is sufficient and makes it possible to design a significantly faster method while retaining accuracy. Beyond focusing on speed we scale up the training data by utilizing existing datasets as well as collecting a new CommonsPano dataset of 9 891 publicly available panoramas with permissive licenses. We perform an extensive evaluation in terms of direct camera calibration accuracy and performance in downstream 3D vision tasks such as relative pose estimation, SfM, and 3D reconstruction. The evaluation shows that our method is both significantly faster and more accurate compared to the previous state of the art.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Downstream tasks in 3D: one panel per task; controls and canvases are built by static/js/clouds.js from web/manifest.json of the kocurvik/litecalib_examples repo -->
+	<section class="section" id="clouds">
+		<div class="container is-max-desktop">
+			<h2 class="title is-3 has-text-centered">Downstream Tasks in 3D</h2>
+
+			<div class="lc-card lc-task-card">
+				<h3 class="title is-5 mb-1">Monocular Depth Estimation</h3>
+				<p class="muted-note mb-0">Monocular geometry models expect little lens distortion, so a fisheye photo comes out bent. Undistorting it with LiteCalib's camera first straightens the room.</p>
+				<div class="lc-task" data-task="mde"></div>
+			</div>
+
+			<div class="lc-card lc-task-card">
+				<h3 class="title is-5 mb-1">3D Reconstruction</h3>
+				<p class="muted-note mb-0">Feed-forward reconstruction models expect undistorted photos too. LiteCalib calibrates each camera from its photos among the ten, and undistorting them with it brings back the scene and the camera poses.</p>
+				<div class="lc-task" data-task="recon"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Speed vs. accuracy -->
+	<section class="section">
+		<div class="container is-max-desktop">
+			<h2 class="title is-3 has-text-centered">Speed vs. Accuracy</h2>
+			<div class="lc-card">
+				<div class="lc-chart-head">
+					<div class="lc-legend" id="speedAccLegend"></div>
+					<div class="buttons has-addons lc-toggle" role="group" aria-label="Device">
+						<button class="button is-small is-selected" type="button" data-device="jetson">Jetson Orin Nano</button>
+						<button class="button is-small" type="button" data-device="a100">A100</button>
+					</div>
+				</div>
+				<div id="speedAccChart" class="lc-chart"></div>
+				<p class="muted-note mb-0" id="speedAccNote"></p>
+			</div>
+		</div>
+	</section>
+
+	<!-- BibTeX -->
+	<section class="section hero is-light" id="BibTeX">
+		<div class="container is-max-desktop content">
+			<div class="bibtex-header">
+				<h2 class="title mb-0">BibTeX</h2>
+				<button class="copy-bibtex-btn" type="button" id="copyBibtex" title="Copy BibTeX to clipboard">
+					<i class="pi pi-copy"></i>
+					<span class="copy-text">Copy</span>
+				</button>
+			</div>
+			<!-- TODO: placeholder until the paper is out -->
+<pre id="bibtex-code"><code>@article{kocur2026litecalib,
+  title={LiteCalib: Fast, Model-Agnostic Single-View Camera Calibration},
+  author={Kocur, Viktor and Buj{\v{n}}{\'a}k, Luk{\'a}{\v{s}} and Gajdo{\v{s}}ech, Luk{\'a}{\v{s}} and Sattler, Torsten and Kukelova, Zuzana},
+  journal={arXiv preprint},
+  year={2026}
+}</code></pre>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="content has-text-centered">
+				<p>
+					This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>,
+					adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		document.getElementById("copyBibtex").addEventListener("click", async (e) => {
+			const btn = e.currentTarget;
+			try {
+				await navigator.clipboard.writeText(document.getElementById("bibtex-code").innerText);
+				btn.classList.add("copied");
+				setTimeout(() => btn.classList.remove("copied"), 1500);
+			} catch (_) { /* clipboard unavailable */ }
+		});
+	</script>
+</body>
+</html>
