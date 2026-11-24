@@ -10,7 +10,7 @@
 	--text-light: #9a9a9a;
 	--background-secondary: var(--lc-tint);
 	--border-color: #eadfe2;
-	--gradient-accent: linear-gradient(135deg, #ff9195 0%, #9e2b2f 100%);
+	--gradient-accent: var(--primary-color);
 }
 
 a {
